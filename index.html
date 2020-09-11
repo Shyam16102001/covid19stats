@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script src="https://kit.fontawesome.com/5d05eea7b2.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="icons/site.webmanifest">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="main.js"></script>
+
+	<title>COVID-19 Tracker | INDIA</title>
+</head>
+<body class="bg-info">
+
+	<div class="container-fluid bg-info p-3 text-center my-4">
+		<h1 class="title text-white"><i class="material-icons">coronavirus</i>COVID-19 Tracker<i class="material-icons">coronavirus</i></h1>
+		<h3 class="text-transparent">
+			A website to keep track of the COVID-19 cases in INDIA
+		</h3>
+	</div>
+
+	<div class="container my-4 bg-light">
+		<div class="row text-center">
+			<div class="col-lg-3 text-warning">
+				<h4>Confirmed</h4>
+				<p id="confirmed"></p>
+			</div>
+			<div class="col-lg-3 text-info">
+				<h4>Active</h4>
+				<p id="active"></p>
+			</div>
+			<div class="col-lg-3 text-success">
+				<h4>Recovered</h4>
+				<p id="recovered"></p>
+			</div>
+			<div class="col-lg-3 text-danger">
+				<h4>Deceased</h4>
+				<p id="deaths"></p>
+			</div>
+		</div>
+		<p class="text-center text-secondary p-0 my-0 font-weight-lighter small text-monospace" id="lastupdate">*Last Updated Time: </p>
+	</div>
+	
+	<p class="d-block d-sm-none text-center text-danger">
+		*Change to landscape mode to see the graph.*
+	</p>
+
+	<div class="d-none d-sm-block w-100 bg-white">
+		<h2 class="text-center text-primary">COVID-19 Cases in India</h2>
+		<p class="text-muted text-center small">*Click on the Cofirmed Cases/Recovered/Deceased button to remove the paticular data from the graph.*</p>
+		<canvas id="myChart"></canvas>
+	</div>
+
+	<article class="container bg-dark p-3 my-4 text-center text-warning">
+		Stay Home <i class="fas fa-home"></i> Stay Safe.<br>
+		Download <u><a href="https://www.mygov.in/aarogya-setu-app/" class="text-warning">Aarogya Setu Mobile App</a></u><br>
+		<p class="small text-secondary credits">Information provided by <a href="https://www.covid19india.org/" class="text-secondary">COVID19INDIA</a></p>
+	</article>
+
+	<footer class="footer mt-5 py-3 bg-dark">
+		<div class="container text-center">
+			<span class="text-secondary">
+				Created with <i class="far fa-heart"></i> by <a href="https://shyam16102001.github.io" class="text-secondary">M.S.M</a>
+			</span>
+		</div>
+	</footer>
+</body>
+</html>

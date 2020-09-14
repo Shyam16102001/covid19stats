@@ -40,9 +40,6 @@ $(document).ready(function () {
       totalrecovered.push(obj.totalrecovered);
     });
 
-    console.log(data.cases_time_series.totalconfirmed)
-
-
     states.shift();
     confirmed.shift();
     recovered.shift();
@@ -53,6 +50,8 @@ $(document).ready(function () {
     $("#recovered").append(total_recovered);
     $("#deaths").append(total_deaths);
     $("#lastupdate").append(lastupdate);
+
+    console.log("Created by M.S.M.")
 
     var myChart = document.getElementById("myChart").getContext("2d");
     var chart = new Chart(myChart, {

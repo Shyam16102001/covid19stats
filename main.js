@@ -13,6 +13,11 @@ $(document).ready(function () {
     var total_deaths;
     var lastupdate;
 
+    var date = [];
+    var totalconfirmed = [];
+    var totaldeceased = [];
+    var totalrecovered = [];
+
     total_active = data.statewise[0].active;
     total_confirmed = data.statewise[0].confirmed;
     total_recovered = data.statewise[0].recovered;
@@ -27,6 +32,15 @@ $(document).ready(function () {
       deaths.push(obj.deaths);
       active.push(obj.active);
     });
+
+    $.each(data.cases_time_series, function (id, obj) {
+      date.push(obj.date);
+      totalconfirmed.push(obj.totalconfirmed);
+      totaldeceased.push(obj.totaldeceased);
+      totalrecovered.push(obj.totalrecovered);
+    });
+
+    console.log(data.cases_time_series.totalconfirmed)
 
 
     states.shift();
@@ -44,24 +58,57 @@ $(document).ready(function () {
     var chart = new Chart(myChart, {
       type: "line",
       data: {
+        labels: date,
+        datasets: [
+          {
+            label: "Total Confirmed Cases",
+            data: totalconfirmed,
+            borderColor: "#ffc107",
+            minBarLength: 100,
+
+          },
+          {
+            label: "Total Recovered Cases",
+            data: totalrecovered,
+            backgroundColor: "#14e81f",
+            minBarLength: 100,
+          },
+          {
+            label: "Total Deceased Cases",
+            data: totaldeceased,
+            backgroundColor: "#F24338",
+            minBarLength: 100,
+          },
+        ],
+      },
+      option: {},
+    });
+
+    var myChart = document.getElementById("myChart2").getContext("2d");
+    var chart = new Chart(myChart, {
+      type: "line",
+      data: {
         labels: states,
         datasets: [
           {
             label: "Confirmed Cases",
             data: confirmed,
-            backgroundColor: "#f1c40f",
+            borderColor: "#ff7f00",
+            backgroundColor: "#ffc107", 
             minBarLength: 100,
           },
           {
             label: "Recovered",
             data: recovered,
-            backgroundColor: "#2ecc71",
+            borderColor: "#28a745",
+            backgroundColor: "#00ff3a", 
             minBarLength: 100,
           },
           {
             label: "Deceased",
             data: deaths,
-            backgroundColor: "#e74c3c",
+            borderColor: "#ff0018",
+            backgroundColor: "#cd3140", 
             minBarLength: 100,
           },
         ],

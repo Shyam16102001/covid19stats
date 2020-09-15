@@ -45,7 +45,8 @@
 		</h3>
 	</div>
 
-	<div class="container my-4 bg-light">
+	<div class="container bg-light">
+		<h2 class="text-center text-primary p-2"><u>COVID-19 Cases in India</u></h2>
 		<div class="row text-center p-1">
 			<div class="col-md-3 text-warning">
 				<h4>Confirmed</h4>
@@ -64,11 +65,14 @@
 				<p id="deaths"></p>
 			</div>
 		</div>
-		<p class="text-center text-secondary p-0 my-0 font-weight-lighter small text-monospace" id="lastupdate">*Last Updated Time: </p>
 	</div>
+	<div class="container my-2 bg-light">
+		<canvas id="myChart3"></canvas>
+      	<p class="text-center text-secondary p-0 my-0 font-weight-lighter small text-monospace" id="lastupdate">*Last Updated Time: </p>
+    </div>
 	
-	<p class="d-block d-sm-none text-center text-danger">
-		*Change to Desktop mode to see the detail graph.*
+	<p class="d-block d-sm-none text-center text-danger my-3">
+		*Change to Desktop mode to see the Detail Information.*
 	</p>
 
 	<div class="d-none d-sm-block w-100 bg-white my-5">
@@ -79,7 +83,7 @@
       	<canvas id="myChart"></canvas>
     </div>
 
-	<div class="d-none d-sm-block w-100 bg-white">
+	<div class="d-none d-sm-block w-100 bg-white my-5">
 		<h2 class="text-center text-primary">COVID-19 Cases in India-Statewise</h2>
 		<p class="text-muted text-center small">
 			*Click on the Cofirmed Cases/Recovered/Deceased button to remove the paticular data from the graph.*
@@ -87,7 +91,7 @@
 		<canvas id="myChart2"></canvas>
 	</div>
 
-	<div class="container-fluid my-5 bg-white">
+	<div class="container-fluid d-none d-sm-block w-100 my-3 bg-white">
 		<h2 class="text-center text-primary p-2">State Wise Count of COVID-19 Cases-India</h2>
 		<div class="table-responsive">
 			<input class="form-control my-2" id="myInput" type="text" placeholder="Search...">

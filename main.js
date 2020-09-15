@@ -114,6 +114,27 @@ $(document).ready(function () {
       },
       option: {},
     });
+    var myChart2 = document.getElementById("myChart3").getContext("2d");
+    var mypie = new Chart(myChart2, {
+      type: "doughnut",
+      data: {
+        datasets: [
+          {
+
+            data: [total_confirmed, total_active, total_deaths, total_recovered],
+            backgroundColor: ["#ffc107", "#007bff", "#dc3545", "#28a745"],
+          },
+        ],
+        labels: [
+          'Total Confirmed',
+          'Total Active',
+          'Total Deaths',
+          'Total Recovered',
+        ],
+
+      },
+      option: {},
+    });
     $(document).ready(function(){
       $("#myInput").on("keyup", function() {
         var value = $(this).val().toLowerCase();

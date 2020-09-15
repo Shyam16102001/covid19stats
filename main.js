@@ -131,5 +131,6 @@ $(document).ready(function () {
       });
       tbody.append(tr);
     });
+    $('tr:first-child').remove();
   });
 });

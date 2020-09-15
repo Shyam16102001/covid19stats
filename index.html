@@ -9,6 +9,9 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 	<script src="https://kit.fontawesome.com/5d05eea7b2.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -83,6 +86,26 @@
 		</p>
 		<canvas id="myChart2"></canvas>
 	</div>
+
+	<div class="container-fluid my-5 bg-white">
+		<h2 class="text-center text-primary p-2">State Wise Count of COVID-19 Cases-India</h2>
+		<div class="table-responsive">
+			<input class="form-control my-2" id="myInput" type="text" placeholder="Search...">
+        	<table class="table table-light table-striped table-hover" id="myTable">
+          	<thead class="thead-dark">
+            	<tr>
+              	<th scope="col">States</th>
+              	<th scope="col">Confirmed</th>
+              	<th scope="col">Active</th>
+              	<th scope="col">Recovered</th>
+              	<th scope="col">Deceased</th>
+            	</tr>
+          	</thead>
+          	<tbody>
+          	</tbody>
+        	</table>
+      	</div>
+    </div>
 
 	<article class="container bg-dark p-3 my-4 text-center text-warning">
 		Stay Home <i class="fas fa-home"></i> Stay Safe.<br>

@@ -114,5 +114,22 @@ $(document).ready(function () {
       },
       option: {},
     });
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    var tbody = $('.table'),
+      props = ["state", "confirmed", "active", "recovered", "deaths"];
+    $.each(data.statewise, function (i, objk) {
+      var tr = $('<tr>');
+      $.each(props, function (i, prop) {
+        $('<td>').html(objk[prop]).appendTo(tr);
+      });
+      tbody.append(tr);
+    });
   });
 });
